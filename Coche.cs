@@ -9,8 +9,7 @@ namespace practicas_fundamentals
         private int _kilometrosRecorridos; //Se nombram normalemtne con un guión bajo al princio.
                                            //Si tiene varias palabras, se separan por mayúsculas. 
                                            //Otra gente no pone el guión bajo inicial: kilometrosRecorridos
-        private double _gasolina;                           
-        
+       
 
         #endregion
 
@@ -30,17 +29,8 @@ namespace practicas_fundamentals
 
         }
 
-        public double Gasolina
-        {
-            get
-            {
-                return _gasolina;
-            }
-            private set
-            {
-                _gasolina = value;
-            }
-        }
+        public double Gasolina { get; private set; }//Esto es más cómodo y rápido si sólo quiero hacer get y set, sin código adicional. 
+
         #endregion
 
         #region Constructores
@@ -52,7 +42,7 @@ namespace practicas_fundamentals
             // KilometrosRecorridos = 0;//También se podría hacer así, porque , aunque tenga el getter privado, está dentro de la misma clase
             //Aquí, se metería en el setter y value tomaría el valor 0, y por tanto _kilometrosRecorridos pasaría a 0
 
-            _gasolina = 5;
+            Gasolina = 5;
         }
 
 
