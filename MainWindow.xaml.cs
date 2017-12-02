@@ -40,5 +40,10 @@ namespace practicas_fundamentals
         {
             _coche.Andar100Km();
         }
+
+        private void Recorrer200Button_Click(object sender, RoutedEventArgs e)
+        {
+            _coche.Andar200Km();
+        }
     }
 }

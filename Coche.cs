@@ -55,6 +55,12 @@ namespace practicas_fundamentals
             Gasolina -= 1;
         }
 
+        public void Andar200Km()
+        {
+            _kilometrosRecorridos += 200;
+            Gasolina -= 2;
+        }
+
         #endregion
 
     }
