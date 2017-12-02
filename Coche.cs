@@ -69,6 +69,12 @@ namespace practicas_fundamentals
             Gasolina -= 2;
         }
 
+        public void Andar(int km)
+        {
+            _kilometrosRecorridos += km;
+            Gasolina -= km / 100.0;
+        }
+
         #endregion
 
     }

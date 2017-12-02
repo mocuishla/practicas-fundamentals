@@ -45,5 +45,13 @@ namespace practicas_fundamentals
         {
             _coche.Andar200Km();
         }
+
+        private void RecorrerButton_Click(object sender, RoutedEventArgs e)
+        {
+            string texto =  DistanciaTextBox.Text;
+            int distancia;
+            distancia = int.Parse(texto);
+            _coche.Andar(distancia);
+        }
     }
 }
