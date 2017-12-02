@@ -20,7 +20,7 @@ namespace practicas_fundamentals
     /// </summary>
     public partial class MainWindow : Window
     {
-        Coche _coche = new Coche();//Cuando hago new, c# busca un constructor con los mismos parámetros que he pasado, y lo llamada
+        Coche _coche = new Coche("azul");//Cuando hago new, c# busca un constructor con los mismos parámetros que he pasado, y lo llamada
                                   //para construir una instancia. 
         public MainWindow()
         {
@@ -32,7 +32,7 @@ namespace practicas_fundamentals
             //coche._kilometrosRecorridos = 44; No puedo establecer a un campo porque lo tengo privado.
             //MessageBox.Show(coche._kilometrosRecorridos); No puedo acceder a un campo porque lo tengo privado.
             // coche.KilometrosRecorridos = 55; No puedo, aunque la propiedad sea pública, su setter es privado. 
-            MessageBox.Show("Tengo un coche que ha recorrido " + _coche.KilometrosRecorridos 
+            MessageBox.Show("Tengo un coche " + _coche.Color + " que ha recorrido " + _coche.KilometrosRecorridos 
                 + " kilómetros y tiene " + _coche.Gasolina + " litros de gasofa");
         }
 
