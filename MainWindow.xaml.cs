@@ -53,5 +53,11 @@ namespace practicas_fundamentals
             distancia = int.Parse(texto);
             _coche.Andar(distancia);
         }
+
+        //TODO: Quitar el botón de ver coche y que cada vez que pulso en uno de los demás, que se muestre el mensaje de info del coche
+        //TODO: En la clase coche, hay un método Andar100Km, otro Andar200Km y otro Andar. ¿Podríamos reducirlo sólo a un método (conservando los botones)?
+        //TODO: Un botón que se llame "pintar de verde" y que me pinte el coche de verde.
+        //TODO: Otro botón que  se llame "pintar" y que me pinte el color con lo que el usuario ponga en una caja de texto. 
+        //TODO: Si se me acaba la gasolina e intento andar, que salte una excepción en el programa. 
     }
 }
