@@ -45,6 +45,15 @@ namespace practicas_fundamentals
             Gasolina = 5;
         }
 
+        #endregion
+
+        #region Métodos
+
+        public void Andar100Km()
+        {
+            _kilometrosRecorridos += 100;
+            Gasolina -= 1;
+        }
 
         #endregion
 
