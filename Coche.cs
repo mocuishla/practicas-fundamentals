@@ -1,4 +1,6 @@
-﻿namespace practicas_fundamentals
+﻿using System;
+
+namespace practicas_fundamentals
 {
     internal class Coche
     {
@@ -7,6 +9,8 @@
         private int _kilometrosRecorridos; //Se nombram normalemtne con un guión bajo al princio.
                                            //Si tiene varias palabras, se separan por mayúsculas. 
                                            //Otra gente no pone el guión bajo inicial: kilometrosRecorridos
+        private double _gasolina;                           
+        
 
         #endregion
 
@@ -16,11 +20,25 @@
         {
             get
             {
+                Console.WriteLine("Me están pidiendo los kilómetros recorridos"); //Puedo añadir código adicional
                 return _kilometrosRecorridos;
             }
             private set//La pongo private para que sólo desde dentro de mi clase se pueda modificar. 
             {
                 _kilometrosRecorridos = value;//value es una palabra reservada. Conetendrá el valor que me hayan pasado al establecer esta propiedad. 
+            }
+
+        }
+
+        public double Gasolina
+        {
+            get
+            {
+                return _gasolina;
+            }
+            private set
+            {
+                _gasolina = value;
             }
         }
         #endregion
@@ -33,7 +51,10 @@
             _kilometrosRecorridos = 0;//Optamos por esta opcíon, proque es la más simple
             // KilometrosRecorridos = 0;//También se podría hacer así, porque , aunque tenga el getter privado, está dentro de la misma clase
             //Aquí, se metería en el setter y value tomaría el valor 0, y por tanto _kilometrosRecorridos pasaría a 0
+
+            _gasolina = 5;
         }
+
 
         #endregion
 
