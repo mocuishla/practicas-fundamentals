@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Button x:Name="VerCocheButton" Content="Ver mi coche" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="208" Height="37" FontSize="18" Click="VerCocheButton_Click"/>
+
     </Grid>
 </Window>

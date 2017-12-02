@@ -24,5 +24,10 @@ namespace practicas_fundamentals
         {
             InitializeComponent();
         }
+
+        private void VerCocheButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("De momento no tengo coche");
+        }
     }
 }
