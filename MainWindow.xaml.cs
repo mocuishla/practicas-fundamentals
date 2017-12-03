@@ -61,6 +61,16 @@ namespace practicas_fundamentals
             MessageBox.Show(CrearMensaje());
         }
 
+        private void PintarVerdeButton_Click(object sender, RoutedEventArgs e)
+        {
+            _coche.CambiarColor();
+
+            MessageBox.Show(CrearMensaje());
+
+        }
+
+
+
         //TODO: Un botón que se llame "pintar de verde" y que me pinte el coche de verde.
         //TODO: Otro botón que  se llame "pintar" y que me pinte el color con lo que el usuario ponga en una caja de texto. 
         //TODO: Si se me acaba la gasolina e intento andar, que salte una excepción en el programa. 

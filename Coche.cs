@@ -65,6 +65,11 @@ namespace practicas_fundamentals
             Gasolina -= km / 100.0;
         }
 
+        public void CambiarColor()
+        {
+            Color = "verde";
+        }
+
         #endregion
 
     }
