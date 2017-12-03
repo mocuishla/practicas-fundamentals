@@ -23,12 +23,22 @@ namespace practicas_fundamentals
         Coche _coche = new Coche("azul");//Cuando hago new, c# busca un constructor con los mismos parámetros que he pasado, y lo llamada
                                          //para construir una instancia. 
 
+        List<Coche> _coches = new List<Coche>();
+
         public MainWindow()
         {
             InitializeComponent();
+
+            //Coche coche = new Coche("azul");
+            //_coches.Add(coche);
+
+            _coches.Add(new Coche("azul"));//Lo hago en un solo paso en lugar de en dos como arriba
+            _coches.Add(new Coche("rojo"));
+            _coches.Add(new Coche("verde"));
+
         }
 
-        
+
 
         private void Recorrer100Button_Click(object sender, RoutedEventArgs e)
         {
@@ -98,6 +108,25 @@ namespace practicas_fundamentals
 
             MessageBox.Show(CrearMensaje());
 
+        }
+
+        private void MostrarCocheButton_Click(object sender, RoutedEventArgs e)
+        {
+            int seleccion = -1;
+            if (CocheAzulRadio.IsChecked == true)
+            {
+                seleccion = 0;
+            }
+            else
+                if (CocheRojoRadio.IsChecked == true)
+            {
+                seleccion = 1;
+            }
+            else
+            {
+                seleccion = 2;
+            }
+            MessageBox.Show("Ha seleccionado el coche: " + seleccion);
         }
 
 
