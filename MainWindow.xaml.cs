@@ -21,7 +21,8 @@ namespace practicas_fundamentals
     public partial class MainWindow : Window
     {
         Coche _coche = new Coche("azul");//Cuando hago new, c# busca un constructor con los mismos parámetros que he pasado, y lo llamada
-                                  //para construir una instancia. 
+                                         //para construir una instancia. 
+
         public MainWindow()
         {
             InitializeComponent();
@@ -33,16 +34,20 @@ namespace practicas_fundamentals
         {
             _coche.Andar(100);
 
-            MessageBox.Show("Tengo un coche " + _coche.Color + " que ha recorrido " + _coche.KilometrosRecorridos
-                + " kilómetros y tiene " + _coche.Gasolina + " litros de gasofa");
+            MessageBox.Show(CrearMensaje());
+        }
+
+        public string CrearMensaje()
+        {
+            return "Tengo un coche " + _coche.Color + " que ha recorrido " + _coche.KilometrosRecorridos
+                + " kilómetros y tiene " + _coche.Gasolina + " litros de gasofa";
         }
 
         private void Recorrer200Button_Click(object sender, RoutedEventArgs e)
         {
             _coche.Andar(200);
 
-            MessageBox.Show("Tengo un coche " + _coche.Color + " que ha recorrido " + _coche.KilometrosRecorridos
-                + " kilómetros y tiene " + _coche.Gasolina + " litros de gasofa");
+            MessageBox.Show(CrearMensaje());
         }
 
         private void RecorrerButton_Click(object sender, RoutedEventArgs e)
@@ -53,9 +58,7 @@ namespace practicas_fundamentals
 
             _coche.Andar(distancia);
 
-            MessageBox.Show("Tengo un coche " + _coche.Color + " que ha recorrido " + _coche.KilometrosRecorridos
-                + " kilómetros y tiene " + _coche.Gasolina + " litros de gasofa");
-
+            MessageBox.Show(CrearMensaje());
         }
 
         //TODO: Un botón que se llame "pintar de verde" y que me pinte el coche de verde.
