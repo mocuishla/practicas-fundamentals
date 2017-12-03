@@ -36,6 +36,8 @@ namespace practicas_fundamentals
             _coches.Add(new Coche("rojo"));
             _coches.Add(new Coche("verde"));
 
+           // Coche coche = _coches[1];
+
         }
 
 
@@ -126,13 +128,15 @@ namespace practicas_fundamentals
             {
                 seleccion = 2;
             }
-            MessageBox.Show("Ha seleccionado el coche: " + seleccion);
+
+            Coche cocheSeleccionado;
+            cocheSeleccionado = _coches[seleccion];
+
+            MessageBox.Show("Ha seleccionado el coche: " + cocheSeleccionado.Color);
         }
 
 
 
-        //TODO: Un botón que se llame "pintar de verde" y que me pinte el coche de verde.
-        //TODO: Otro botón que  se llame "pintar" y que me pinte el color con lo que el usuario ponga en una caja de texto. 
-        //TODO: Si se me acaba la gasolina e intento andar, que salte una excepción en el programa. 
+        
     }
 }
