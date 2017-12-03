@@ -10,7 +10,7 @@ namespace practicas_fundamentals
                                            //Si tiene varias palabras, se separan por mayúsculas. 
                                            //Otra gente no pone el guión bajo inicial: kilometrosRecorridos
 
-        
+        private double _gasolina;
        
 
         #endregion
@@ -26,15 +26,29 @@ namespace practicas_fundamentals
             }
             private set//La pongo private para que sólo desde dentro de mi clase se pueda modificar. 
             {
-                _kilometrosRecorridos = value;//value es una palabra reservada. Conetendrá el valor que me hayan pasado al establecer esta propiedad. 
+                _kilometrosRecorridos = value;//value es una palabra reservada. Contendrá el valor que me hayan pasado al establecer esta propiedad. 
             }
 
         }
 
-        public double Gasolina { get; private set; }//Esto es más cómodo y rápido si sólo quiero hacer get y set, sin código adicional. 
-
-        if 
-
+        public double Gasolina
+        {
+            get
+            {
+                return _gasolina;
+            }
+            private set
+            {
+                if (value <0)
+                {
+                    throw new Exception("No tienes gasolina para continuar");
+                }
+                _gasolina = value;
+                
+                    
+            }
+        }//Esto es más cómodo y rápido si sólo quiero hacer get y set, sin código adicional. 
+               
         public String Color { get; private set; }
 
         #endregion
