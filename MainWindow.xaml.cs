@@ -114,6 +114,13 @@ namespace practicas_fundamentals
 
         private void MostrarCocheButton_Click(object sender, RoutedEventArgs e)
         {
+            Coche cocheSeleccionado = GetCocheSeleccionado();
+
+            MessageBox.Show("Ha seleccionado el coche: " + cocheSeleccionado.Color);
+        }
+
+        private Coche GetCocheSeleccionado()
+        {
             int seleccion = -1;
             if (CocheAzulRadio.IsChecked == true)
             {
@@ -132,7 +139,7 @@ namespace practicas_fundamentals
             Coche cocheSeleccionado;
             cocheSeleccionado = _coches[seleccion];
 
-            MessageBox.Show("Ha seleccionado el coche: " + cocheSeleccionado.Color);
+            return cocheSeleccionado;
         }
 
 
