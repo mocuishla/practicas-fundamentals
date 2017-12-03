@@ -6,7 +6,7 @@ namespace practicas_fundamentals
     {
         #region Campos / Variables miembro. Almacenan ESTADO privado. //Buena práctica poner los campos privados. 
 
-        private int _kilometrosRecorridos; //Se nombram normalemtne con un guión bajo al princio.
+        private int _kilometrosRecorridos; //Se nombram normalmente con un guión bajo al princio.
                                            //Si tiene varias palabras, se separan por mayúsculas. 
                                            //Otra gente no pone el guión bajo inicial: kilometrosRecorridos
 
@@ -41,8 +41,8 @@ namespace practicas_fundamentals
 
         public Coche(String color)//Si alguien hace new Coche(), el programa se mete aquí para inicializar ese coche
         {
-            //Al pricnipio, al crear un coche, quiero que sus kilómetros recorridos sean 0. 
-            _kilometrosRecorridos = 0;//Optamos por esta opcíon, proque es la más simple
+            //Al principio, al crear un coche, quiero que sus kilómetros recorridos sean 0. 
+            _kilometrosRecorridos = 0;//Optamos por esta opción, porque es la más simple
             // KilometrosRecorridos = 0;//También se podría hacer así, porque , aunque tenga el getter privado, está dentro de la misma clase
             //Aquí, se metería en el setter y value tomaría el valor 0, y por tanto _kilometrosRecorridos pasaría a 0
 
@@ -57,22 +57,21 @@ namespace practicas_fundamentals
 
         #region Métodos
 
-        public void Andar100Km()
-        {
-            _kilometrosRecorridos += 100;
-            Gasolina -= 1;
-        }
+      
 
-        public void Andar200Km()
+        public void Andar(int km, int cien, int doscien)
         {
-            _kilometrosRecorridos += 200;
-            Gasolina -= 2;
-        }
-
-        public void Andar(int km)
-        {
+           
             _kilometrosRecorridos += km;
             Gasolina -= km / 100.0;
+
+            _kilometrosRecorridos += cien;
+            Gasolina -= 1;
+
+            _kilometrosRecorridos += doscien;
+            Gasolina -= 2;
+
+            
         }
 
         #endregion
