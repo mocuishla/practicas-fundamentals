@@ -32,7 +32,14 @@ namespace practicas_fundamentals
 
         private void Recorrer100Button_Click(object sender, RoutedEventArgs e)
         {
-            _coche.Andar(100);
+            try
+            {
+                _coche.Andar(100);
+            }
+            catch
+            {
+                MessageBox.Show("Error al andar en coche");
+            }
 
             MessageBox.Show(CrearMensaje());
         }
@@ -45,18 +52,33 @@ namespace practicas_fundamentals
 
         private void Recorrer200Button_Click(object sender, RoutedEventArgs e)
         {
-            _coche.Andar(200);
+            try
+            {
+                _coche.Andar(200);
+            }
+            catch
+            {
+                MessageBox.Show("Error al andar en coche");
+            }
+            
 
             MessageBox.Show(CrearMensaje());
         }
 
         private void RecorrerButton_Click(object sender, RoutedEventArgs e)
         {
-            string texto =  DistanciaTextBox.Text;
+            string texto = DistanciaTextBox.Text;
             int distancia;
             distancia = int.Parse(texto);
 
-            _coche.Andar(distancia);
+            try
+            {
+                _coche.Andar(distancia);
+            }
+            catch
+            {
+                MessageBox.Show("Error al andar en coche");
+            }
 
             MessageBox.Show(CrearMensaje());
         }

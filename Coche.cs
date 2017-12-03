@@ -33,6 +33,7 @@ namespace practicas_fundamentals
 
         public double Gasolina
         {
+
             get
             {
                 return _gasolina;
@@ -77,8 +78,9 @@ namespace practicas_fundamentals
 
         public void Andar(int km)
         {
-            _kilometrosRecorridos += km;
             Gasolina -= km / 100.0;
+            _kilometrosRecorridos += km;
+            
         }
 
         public void CambiarColor(string texto)
