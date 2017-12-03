@@ -38,14 +38,12 @@ namespace practicas_fundamentals
 
         private void Recorrer100Button_Click(object sender, RoutedEventArgs e)
         {
-            int cien = 100;
-            _coche.Andar(0, cien, 0);
+            _coche.Andar(100);
         }
 
         private void Recorrer200Button_Click(object sender, RoutedEventArgs e)
         {
-            int doscien = 200;
-            _coche.Andar(0,0,doscien);
+            _coche.Andar(200);
         }
 
         private void RecorrerButton_Click(object sender, RoutedEventArgs e)
@@ -54,7 +52,7 @@ namespace practicas_fundamentals
             int distancia;
             distancia = int.Parse(texto);
 
-            _coche.Andar(distancia, 0, 0);
+            _coche.Andar(distancia);
             
         }
 

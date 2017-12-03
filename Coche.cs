@@ -51,27 +51,18 @@ namespace practicas_fundamentals
             Color =  color;
         }
 
-        
+
 
         #endregion
 
         #region Métodos
 
-      
 
-        public void Andar(int km, int cien, int doscien)
+
+        public void Andar(int km)
         {
-           
             _kilometrosRecorridos += km;
             Gasolina -= km / 100.0;
-
-            _kilometrosRecorridos += cien;
-            Gasolina -= 1;
-
-            _kilometrosRecorridos += doscien;
-            Gasolina -= 2;
-
-            
         }
 
         #endregion
