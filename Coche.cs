@@ -33,6 +33,8 @@ namespace practicas_fundamentals
 
         public double Gasolina { get; private set; }//Esto es más cómodo y rápido si sólo quiero hacer get y set, sin código adicional. 
 
+        if 
+
         public String Color { get; private set; }
 
         #endregion
@@ -65,9 +67,9 @@ namespace practicas_fundamentals
             Gasolina -= km / 100.0;
         }
 
-        public void CambiarColor()
+        public void CambiarColor(string texto)
         {
-            Color = "verde";
+            Color = texto;
         }
 
         #endregion

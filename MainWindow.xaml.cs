@@ -63,7 +63,16 @@ namespace practicas_fundamentals
 
         private void PintarVerdeButton_Click(object sender, RoutedEventArgs e)
         {
-            _coche.CambiarColor();
+            _coche.CambiarColor("verde");
+
+            MessageBox.Show(CrearMensaje());
+
+        }
+
+        private void PintarButton_Click(object sender, RoutedEventArgs e)
+        {
+            string texto = ColorTextBox.Text;
+            _coche.CambiarColor(texto);
 
             MessageBox.Show(CrearMensaje());
 
