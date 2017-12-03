@@ -27,23 +27,22 @@ namespace practicas_fundamentals
             InitializeComponent();
         }
 
-        private void VerCocheButton_Click(object sender, RoutedEventArgs e)
-        {
-            //coche._kilometrosRecorridos = 44; No puedo establecer a un campo porque lo tengo privado.
-            //MessageBox.Show(coche._kilometrosRecorridos); No puedo acceder a un campo porque lo tengo privado.
-            // coche.KilometrosRecorridos = 55; No puedo, aunque la propiedad sea pública, su setter es privado. 
-            MessageBox.Show("Tengo un coche " + _coche.Color + " que ha recorrido " + _coche.KilometrosRecorridos 
-                + " kilómetros y tiene " + _coche.Gasolina + " litros de gasofa");
-        }
+        
 
         private void Recorrer100Button_Click(object sender, RoutedEventArgs e)
         {
             _coche.Andar(100);
+
+            MessageBox.Show("Tengo un coche " + _coche.Color + " que ha recorrido " + _coche.KilometrosRecorridos
+                + " kilómetros y tiene " + _coche.Gasolina + " litros de gasofa");
         }
 
         private void Recorrer200Button_Click(object sender, RoutedEventArgs e)
         {
             _coche.Andar(200);
+
+            MessageBox.Show("Tengo un coche " + _coche.Color + " que ha recorrido " + _coche.KilometrosRecorridos
+                + " kilómetros y tiene " + _coche.Gasolina + " litros de gasofa");
         }
 
         private void RecorrerButton_Click(object sender, RoutedEventArgs e)
@@ -53,7 +52,10 @@ namespace practicas_fundamentals
             distancia = int.Parse(texto);
 
             _coche.Andar(distancia);
-            
+
+            MessageBox.Show("Tengo un coche " + _coche.Color + " que ha recorrido " + _coche.KilometrosRecorridos
+                + " kilómetros y tiene " + _coche.Gasolina + " litros de gasofa");
+
         }
 
         //TODO: Quitar el botón de ver coche y que cada vez que pulso en uno de los demás, que se muestre el mensaje de info del coche

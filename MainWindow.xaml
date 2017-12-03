@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Button x:Name="VerCocheButton" Content="Ver mi coche" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="154" Height="37" FontSize="18" Click="VerCocheButton_Click"/>
         <Button x:Name="Recorrer100Button" Content="Recorrer 100 km" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" Width="154" Height="36" FontSize="18" Click="Recorrer100Button_Click"/>
         <Button x:Name="Recorrer200Button" Content="Recorrer 200 km" HorizontalAlignment="Left" Margin="10,93,0,0" VerticalAlignment="Top" Width="154" Height="34" FontSize="16" Click="Recorrer200Button_Click"/>
         <Button x:Name="RecorrerButton" Content="Recorrer:
