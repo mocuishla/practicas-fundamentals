@@ -22,7 +22,7 @@ namespace CENSORED
 
             foreach(string palabrota in palabrotas)
             {
-                output = output.Replace(palabrota, "Censored");
+                output = output.Replace(palabrota, palabrota.Substring(0,1));
             }
 
             Console.WriteLine(output);
