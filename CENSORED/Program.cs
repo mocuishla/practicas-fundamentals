@@ -10,16 +10,25 @@ namespace CENSORED
     {
         static void Main(string[] args)
         {
-            List <string> palabrotas = new List<string>();
+           List <string> palabrotas = new List<string>();
 
             palabrotas.Add("Mierda");
             palabrotas.Add("Cabron");
             palabrotas.Add("Puta");
+            
+            string input =  Console.ReadLine();
 
-            Console.WriteLine(palabrotas.Count);
+            string output = input;
+
+            foreach(string palabrota in palabrotas)
+            {
+                output = output.Replace(palabrota, "Censored");
+            }
+
+            Console.WriteLine(output);
 
 
-
+            
 
         }
 
