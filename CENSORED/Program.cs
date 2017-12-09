@@ -10,25 +10,32 @@ namespace CENSORED
     {
         static void Main(string[] args)
         {
-           List <string> palabrotas = new List<string>();
+            List<string> palabrotas = new List<string>();
 
             palabrotas.Add("Mierda");
             palabrotas.Add("Cabron");
             palabrotas.Add("Puta");
-            
-            string input =  Console.ReadLine();
 
-            string output = input;
-
-            foreach(string palabrota in palabrotas)
+            while (true)
             {
-                output = output.Replace(palabrota, palabrota.Substring(0,1));
+                string input = Console.ReadLine();
+                if (input == "acabar")
+                {
+                     break;//me saca del bucle
+                   // return; //me saca del metodo
+                }
+
+                string output = input;
+
+                foreach (string palabrota in palabrotas)
+                {
+                    output = output.Replace(palabrota, palabrota.Substring(0, 1) + "...");
+                }
+
+                Console.WriteLine(output);
             }
 
-            Console.WriteLine(output);
-
-
-            
+            Console.WriteLine("Estoy acabando");
 
         }
 
