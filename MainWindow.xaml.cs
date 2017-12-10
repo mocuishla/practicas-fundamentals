@@ -20,22 +20,19 @@ namespace practicas_fundamentals
     /// </summary>
     public partial class MainWindow : Window
     {
+        Coche _cocheSeleccionado;
 
         List<Coche> _coches = new List<Coche>();
 
         public MainWindow()
         {
-            InitializeComponent();
-
-            //Coche coche = new Coche("azul");
-            //_coches.Add(coche);
-
             _coches.Add(new Coche("azul"));//Lo hago en un solo paso en lugar de en dos como arriba
             _coches.Add(new Coche("rojo"));
             _coches.Add(new Coche("verde"));
 
-           // Coche coche = _coches[1];
+            InitializeComponent();
 
+            _cocheSeleccionado = GetCocheSeleccionado();
         }
 
 
@@ -44,7 +41,7 @@ namespace practicas_fundamentals
         {
             try
             {
-                GetCocheSeleccionado().Andar(100);
+                _cocheSeleccionado.Andar(100);
               }
             catch
             {
@@ -56,17 +53,15 @@ namespace practicas_fundamentals
 
         public string CrearMensaje()
         {
-            Coche cocheSeleccionado = GetCocheSeleccionado();
-
-            return "Tengo un coche " + cocheSeleccionado.Color + " que ha recorrido " + cocheSeleccionado.KilometrosRecorridos
-                + " kilómetros y tiene " + cocheSeleccionado.Gasolina + " litros de gasofa";
+            return "Tengo un coche " + _cocheSeleccionado.Color + " que ha recorrido " + _cocheSeleccionado.KilometrosRecorridos
+                + " kilómetros y tiene " + _cocheSeleccionado.Gasolina + " litros de gasofa";
         }
 
         private void Recorrer200Button_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                GetCocheSeleccionado().Andar(200);
+                _cocheSeleccionado.Andar(200);
             }
             catch
             {
@@ -85,7 +80,7 @@ namespace practicas_fundamentals
 
             try
             {
-                GetCocheSeleccionado().Andar(distancia);
+                _cocheSeleccionado.Andar(distancia);
             }
             catch
             {
@@ -97,7 +92,7 @@ namespace practicas_fundamentals
 
         private void PintarVerdeButton_Click(object sender, RoutedEventArgs e)
         {
-            GetCocheSeleccionado().CambiarColor("verde");
+            _cocheSeleccionado.CambiarColor("verde");
 
             MessageBox.Show(CrearMensaje());
 
@@ -106,7 +101,7 @@ namespace practicas_fundamentals
         private void PintarButton_Click(object sender, RoutedEventArgs e)
         {
             string texto = ColorTextBox.Text;
-            GetCocheSeleccionado().CambiarColor(texto);
+            _cocheSeleccionado.CambiarColor(texto);
 
             MessageBox.Show(CrearMensaje());
 
@@ -114,7 +109,7 @@ namespace practicas_fundamentals
 
         private void MostrarCocheButton_Click(object sender, RoutedEventArgs e)
         {
-            Coche cocheSeleccionado = GetCocheSeleccionado();
+            Coche cocheSeleccionado = _cocheSeleccionado;
 
             MessageBox.Show("Ha seleccionado el coche: " + cocheSeleccionado.Color);
         }
@@ -141,6 +136,10 @@ namespace practicas_fundamentals
 
             return cocheSeleccionado;
         }
-        
+
+        private void CocheRadio_Checked(object sender, RoutedEventArgs e)
+        {
+            _cocheSeleccionado = GetCocheSeleccionado();
+        }
     }
 }

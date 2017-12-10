@@ -15,9 +15,9 @@
         <Button Content="Pintar de verde" HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top" Width="154" Height="34" FontSize="18" Click="PintarVerdeButton_Click"/>
         <Button Content="Pintar de color:" HorizontalAlignment="Left" Margin="10,168,0,0" VerticalAlignment="Top" Width="154" Height="35" FontSize="18" Click="PintarButton_Click"/>
         <TextBox x:Name="ColorTextBox" HorizontalAlignment="Left" Height="35" Margin="191,168,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="107"/>
-        <RadioButton x:Name="CocheRadio1" Content="Primer Coche" HorizontalAlignment="Left" Margin="37,249,0,0" VerticalAlignment="Top" IsChecked="True"/>
-        <RadioButton x:Name="CocheRadio2" Content="Segundo Coche" HorizontalAlignment="Left" Margin="218,252,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="CocheRadio3" Content="Tercer Coche" HorizontalAlignment="Left" Margin="382,252,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="CocheRadio1" Content="Primer Coche" HorizontalAlignment="Left" Margin="37,249,0,0" VerticalAlignment="Top" IsChecked="True" Checked="CocheRadio_Checked"/>
+        <RadioButton x:Name="CocheRadio2" Content="Segundo Coche" HorizontalAlignment="Left" Margin="218,252,0,0" VerticalAlignment="Top" Checked="CocheRadio_Checked"/>
+        <RadioButton x:Name="CocheRadio3" Content="Tercer Coche" HorizontalAlignment="Left" Margin="382,252,0,0" VerticalAlignment="Top" Checked="CocheRadio_Checked"/>
         <Button x:Name="MostrarButton" Content="Mostrar coche seleccionado" HorizontalAlignment="Left" Margin="171,292,0,0" VerticalAlignment="Top" Width="163" Click="MostrarCocheButton_Click"/>
 
     </Grid>
