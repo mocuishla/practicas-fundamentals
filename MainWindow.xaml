@@ -19,6 +19,7 @@
         <RadioButton x:Name="CocheRojoRadio" Content="Coche Rojo" HorizontalAlignment="Left" Margin="218,252,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="CocheVerdeRadio" Content="Coche Verde" HorizontalAlignment="Left" Margin="382,252,0,0" VerticalAlignment="Top"/>
         <Button x:Name="MostrarButton" Content="Mostrar coche seleccionado" HorizontalAlignment="Left" Margin="171,292,0,0" VerticalAlignment="Top" Width="163" Click="MostrarCocheButton_Click"/>
+        <Button Content="Mostrar primer coche" HorizontalAlignment="Left" Margin="307,21,0,0" VerticalAlignment="Top" Width="137" Click="MOstrarPrimerCocheButton_Click"/>
 
     </Grid>
 </Window>

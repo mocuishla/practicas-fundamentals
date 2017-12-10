@@ -46,8 +46,8 @@ namespace practicas_fundamentals
         {
             try
             {
-                _coche.Andar(100);
-            }
+                GetCocheSeleccionado().Andar(100);
+              }
             catch
             {
                 MessageBox.Show("Error al andar en coche");
@@ -58,8 +58,10 @@ namespace practicas_fundamentals
 
         public string CrearMensaje()
         {
-            return "Tengo un coche " + _coche.Color + " que ha recorrido " + _coche.KilometrosRecorridos
-                + " kilómetros y tiene " + _coche.Gasolina + " litros de gasofa";
+            Coche cocheSeleccionado = GetCocheSeleccionado();
+
+            return "Tengo un coche " + cocheSeleccionado.Color + " que ha recorrido " + cocheSeleccionado.KilometrosRecorridos
+                + " kilómetros y tiene " + cocheSeleccionado.Gasolina + " litros de gasofa";
         }
 
         private void Recorrer200Button_Click(object sender, RoutedEventArgs e)
@@ -142,8 +144,10 @@ namespace practicas_fundamentals
             return cocheSeleccionado;
         }
 
-
-
-        
+        private void MOstrarPrimerCocheButton_Click(object sender, RoutedEventArgs e)
+        {
+            Coche primerCoche = GetCocheSeleccionado();
+            MessageBox.Show(primerCoche.Color);
+        }
     }
 }
