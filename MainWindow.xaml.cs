@@ -20,8 +20,6 @@ namespace practicas_fundamentals
     /// </summary>
     public partial class MainWindow : Window
     {
-        Coche _coche = new Coche("azul");//Cuando hago new, c# busca un constructor con los mismos parámetros que he pasado, y lo llamada
-                                         //para construir una instancia. 
 
         List<Coche> _coches = new List<Coche>();
 
@@ -68,7 +66,7 @@ namespace practicas_fundamentals
         {
             try
             {
-                _coche.Andar(200);
+                GetCocheSeleccionado().Andar(200);
             }
             catch
             {
@@ -87,7 +85,7 @@ namespace practicas_fundamentals
 
             try
             {
-                _coche.Andar(distancia);
+                GetCocheSeleccionado().Andar(distancia);
             }
             catch
             {
@@ -99,7 +97,7 @@ namespace practicas_fundamentals
 
         private void PintarVerdeButton_Click(object sender, RoutedEventArgs e)
         {
-            _coche.CambiarColor("verde");
+            GetCocheSeleccionado().CambiarColor("verde");
 
             MessageBox.Show(CrearMensaje());
 
@@ -108,7 +106,7 @@ namespace practicas_fundamentals
         private void PintarButton_Click(object sender, RoutedEventArgs e)
         {
             string texto = ColorTextBox.Text;
-            _coche.CambiarColor(texto);
+            GetCocheSeleccionado().CambiarColor(texto);
 
             MessageBox.Show(CrearMensaje());
 
@@ -124,12 +122,12 @@ namespace practicas_fundamentals
         private Coche GetCocheSeleccionado()
         {
             int seleccion = -1;
-            if (CocheAzulRadio.IsChecked == true)
+            if (CocheRadio1.IsChecked == true)
             {
                 seleccion = 0;
             }
             else
-                if (CocheRojoRadio.IsChecked == true)
+                if (CocheRadio2.IsChecked == true)
             {
                 seleccion = 1;
             }
@@ -143,11 +141,6 @@ namespace practicas_fundamentals
 
             return cocheSeleccionado;
         }
-
-        private void MOstrarPrimerCocheButton_Click(object sender, RoutedEventArgs e)
-        {
-            Coche primerCoche = GetCocheSeleccionado();
-            MessageBox.Show(primerCoche.Color);
-        }
+        
     }
 }
